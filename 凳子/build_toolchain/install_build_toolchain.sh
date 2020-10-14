@@ -4,7 +4,7 @@
 
 DESTDIR=/opt/rt-n56u/toolchain
 DL_NAME="out.tar"
-DL_URL="https://github.com/hminid/Build_Padavan_toolchain-3.4.x/releases/download/20200527/$DL_NAME"
+DL_URL="https://github.com/paikia01/Build_Padavan_toolchain-3.4.x/releases/download/20201014/$DL_NAME"
 
 curl -O -L $DL_URL && \
 mkdir -p $DESTDIR && \
