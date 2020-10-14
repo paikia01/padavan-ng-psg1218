@@ -13,5 +13,5 @@ tar -xvf $DL_NAME -C $DESTDIR
 #EOF
 
 cd /opt/rt-n56u/toolchain
-#sudo ./clean_sources.sh
+sudo ./clean_sources.sh
 sudo ./build_toolchain.sh
