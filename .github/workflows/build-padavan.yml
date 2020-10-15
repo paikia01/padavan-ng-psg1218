@@ -70,11 +70,12 @@ jobs:
         sudo mv -f images/*.trx /opt/images/
         cd /opt/images/
         for i in `ls`; do mv -f $i `echo "$(date +"%Y%m%d")-"$i`; done
+        echo "::set-env name=FILE_NAME::$(date "+%Y%m%d")"
     - name : Upload packages
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-k2-$(date +"%Y%m%d")
+        name: Padavan-k2-${{env.FILE_NAME}}${(date +"%Y%m%d")}
         path: /opt/images
     - name: Upload firmware to cowtransfer
       if: always()
