@@ -75,7 +75,7 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-k2-${{env.FILE_NAME}}${(date +"%Y%m%d")}
+        name: Padavan-k2-${{env.FILE_NAME}}
         path: /opt/images
     - name: Upload firmware to cowtransfer
       if: always()
