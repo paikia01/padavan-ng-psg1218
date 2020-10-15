@@ -1,5 +1,5 @@
 #修改TNAME: K2P-5.0 中的K2P-5.0为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
-name: Build Padavan-ng
+name: Build Padavan-ng$(date +"%Y%m%d")
 
 on: 
   release:
@@ -72,7 +72,7 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages
+        name: Padavan-k2-$(date +"%Y%m%d")
         path: /opt/images
     - name: Upload firmware to cowtransfer
       if: always()
